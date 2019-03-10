@@ -21,7 +21,7 @@ public class MouseHandler implements MouseListener {
 		
 		xComienzo=e.getX();
 		yComienzo=e.getY();
-		seleccionado.setBounds(xComienzo, yComienzo, 0, 0);
+		seleccionado.setBounds(xComienzo, yComienzo, 1, 1);
 		fin[0]=true;
 	}
 
@@ -63,7 +63,7 @@ public class MouseHandler implements MouseListener {
 		}else {
 			yNuevo=yCapturado;
 		}
-		seleccionado.setBounds(xComienzo, yComienzo,xNuevo,yNuevo);
+		seleccionado.setBounds(xComienzo, yComienzo,xNuevo-xComienzo,yNuevo-yComienzo);
 		fin[0]=true;
 	}
 
