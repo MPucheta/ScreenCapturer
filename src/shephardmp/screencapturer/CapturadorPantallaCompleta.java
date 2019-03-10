@@ -2,8 +2,6 @@ package shephardmp.screencapturer;
 
 import java.awt.Rectangle;
 
-import shephardmp.screencapturer.utils.AreaPantalla;
-
 public class CapturadorPantallaCompleta implements ICapturadorPantalla {
 
 	

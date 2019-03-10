@@ -8,9 +8,6 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import shephardmp.screencapturer.utils.Fondo;
-import shephardmp.screencapturer.utils.MouseHandler;
-
 public class CapturadorPantalla implements ICapturadorPantalla {
 
 	public CapturadorPantalla() {

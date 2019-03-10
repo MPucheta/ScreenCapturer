@@ -5,8 +5,6 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.image.BufferedImage;
 
-import shephardmp.screencapturer.utils.ImageTransferable;
-
 public class ScreenCapturer {
 	
 	

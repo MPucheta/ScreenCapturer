@@ -3,7 +3,6 @@ package shephardmp.screencapturer;
 import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
-import shephardmp.screencapturer.utils.ImageTransferable;
 
 public class Main {
 
@@ -43,3 +42,4 @@ public class Main {
 	}
 	
 }
+
