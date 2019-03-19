@@ -9,7 +9,7 @@ import java.io.IOException;
  * @see <a href="https://stackoverflow.com/questions/29511334/why-cant-i-cast-a-buffered-image-into-a-transferrable-object-to-send-it-to-the">Stack Overflow Original Code</a>
  * 
  * 
- * @author      Unknown
+ * @author      Harald Kuhr
  * @version     1.0                
  * @since       1.0   
  * 
