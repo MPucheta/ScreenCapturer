@@ -1,12 +1,12 @@
 # ScreenCapturer
-Save a portion of the screen to the Clipboard! (Just run the .jar)
+Save a portion of the screen to the Clipboard! (Running the .jar)
 
 
 Also avaible as a library to capture the screen into various formats for further processing (ScreenCapturer class)
 
+## Option 1. Maven: 
 
-
-You can download the .jar and add it to your Maven project by modyfing the **pom.xml** as a system file:
+ * **Option 1.1** You can download the .jar and add it to your Maven project as a system file by modifying **pom.xml**:
 
 ```
 <dependency>
@@ -19,7 +19,7 @@ You can download the .jar and add it to your Maven project by modyfing the **pom
 	</systemPath>
 </dependency>
 ```
-Or directly from this repository by using **jitpack**
+* **Option 1.2** Directly from this repository by using **jitpack**:
 ```
 <repositories>
 	<repository>
@@ -28,7 +28,7 @@ Or directly from this repository by using **jitpack**
 	</repository>
 </repositories>
 ```
-And adding this block into the **pom.xml**
+And adding the dependency:
 ```
 <dependency>
 	<groupId>com.github.shephardmp</groupId>
@@ -36,3 +36,8 @@ And adding this block into the **pom.xml**
 	<version>1.0</version
 </dependency>
 ```
+
+**Note: also modifying pom.xml**
+
+
+## Option 2. [As external lib](http://www.oxfordmathcenter.com/drupal7/node/44)
