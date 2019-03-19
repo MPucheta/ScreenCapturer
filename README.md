@@ -1,6 +1,9 @@
 # ScreenCapturer
 Save a portion of the screen to the Clipboard! (Just run the .jar)
+
+
 Also avaible as a library to capture the screen into various formats for further processing (ScreenCapturer class)
+
 
 
 You can download the .jar and add it to your Maven project by modyfing the **pom.xml** as a system file:
