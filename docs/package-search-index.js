@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"shephardmp.screencapturer"},{"l":"shephardmp.screencapturer.utils"}]
+packageSearchIndex = [{"l":"shephardmp.screencapturer"},{"l":"shephardmp.screencapturer.utils"}]
