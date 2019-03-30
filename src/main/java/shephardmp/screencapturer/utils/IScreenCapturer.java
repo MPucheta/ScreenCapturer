@@ -1,4 +1,4 @@
-package shephardmp.screencapturer;
+package shephardmp.screencapturer.utils;
 
 import java.awt.Rectangle;
 

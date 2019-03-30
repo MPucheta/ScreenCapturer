@@ -1,4 +1,4 @@
-package shephardmp.screencapturer;
+package shephardmp.screencapturer.utils;
 
 import java.awt.Dimension;
 import java.awt.Rectangle;
@@ -12,14 +12,14 @@ import java.awt.Toolkit;
  * @version 1.0
  * @serial 1.0
  * <p>
- * Captures all the screen.
+ * Captures the full screen
  * </p>
  */
 public class FullScreenCapturer implements IScreenCapturer {
 
 	/**
 	 * 
-	 * @see shephardmp.screencapturer.IScreenCapturer#captureScreen()
+	 * @see shephardmp.screencapturer.utils.IScreenCapturer#captureScreen()
 	 */
 	public Rectangle captureScreen() {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize(); //gets screen dimensions based on the device running this app.

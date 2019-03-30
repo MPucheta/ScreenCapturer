@@ -1,18 +1,15 @@
-package shephardmp.screencapturer;
+package shephardmp.screencapturer.utils;
 
 import java.awt.Rectangle;
-
-import shephardmp.screencapturer.utils.Background;
-import shephardmp.screencapturer.utils.MouseCapturer;
 
 /**
  * 
  * 
  * @author Mauro Pucheta - "ShephardMP"
- * @version 1.0
- * @serial 1.0
+ * @version 1.0.1
+ * @since 1.0
  * <p>
- * Captures a portion of the screen.
+ * Captures a portion of the screen. 
  * </p>
  */
 public class PartialScreenCapturer implements IScreenCapturer {
@@ -34,10 +31,16 @@ public class PartialScreenCapturer implements IScreenCapturer {
 	
 		spaceToCapture.addMouseListener(new MouseCapturer(capturedScreen,endCapture));
 		while(!endCapture[0]) {			
-			System.out.println(capturedScreen.toString() );	
+			//waiting for MouseCapturer to modify endCapture. It's necessary to induce some wait here. It probably isn't a problem
+			//but i could do this using a mutex instead of a "busy waiting".
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 		
-		System.out.println(capturedScreen.toString());
+		
 		spaceToCapture.dispose(); //manual cleanup
 		return capturedScreen;
 	}

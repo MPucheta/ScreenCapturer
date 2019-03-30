@@ -12,7 +12,7 @@ Also avaible as a library to capture the screen into various formats for further
 <dependency>
 	<groupId>com.github.shephardmp</groupId>
 	<artifactId>screencapturer</artifactId>
-	<version>1.0</version>
+	<version>1.0.1</version>
 	<scope>system</scope>
 	<systemPath>
 	"PATH/TO/JAR"
@@ -33,7 +33,7 @@ And adding the dependency:
 <dependency>
 	<groupId>com.github.shephardmp</groupId>
 	<artifactId>screencapturer</artifactId>
-	<version>1.0</version
+	<version>1.0.1</version>
 </dependency>
 ```
 

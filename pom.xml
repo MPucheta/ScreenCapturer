@@ -1,128 +1,98 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.shephardmp</groupId>
-  <artifactId>screencapturer</artifactId>
-  <version>1.0</version>
-  <packaging>jar</packaging>
+	<groupId>com.github.shephardmp</groupId>
+	<artifactId>screencapturer</artifactId>
+	<version>1.0.1</version>
 
-  <name>screencapturer</name>
-  <url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-   
+	<name>screencapturer</name>
+	<url>http://maven.apache.org</url>
 
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  
-  <!-- Next profile declaration solves API incompatibilities with javadoc -->
-  <profiles>
-  <profile>
-    <id>doclint-java8-disable</id>
-    <activation>
-      <jdk>[1.8,)</jdk>
-    </activation>
-    <properties>
-      <javadoc.opts>-Xdoclint:none</javadoc.opts>
-    </properties>
-  </profile>
-</profiles>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
- <!-- plugins -->
-  <build>
-  
-	  <plugins>
-	  
-	
-			 <plugin>
-			 
-			  <!-- compile for compatibility with older java verisons (JDK's)-->
-	        <groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-compiler-plugin</artifactId>
-	        <version>3.2</version>
-	        <configuration> <!-- Compile java 7 compatible bytecode -->
-	          <source>1.7</source>
-	          <target>1.7</target>
 
-	        </configuration>
-	      </plugin>
-	      
-	      
-	      
-	  <plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-javadoc-plugin</artifactId>
-			<executions>
-				<execution>
-					<id>attach-javadocs</id>
-					<goals>
-						<goal>jar</goal>
-					</goals>
-				</execution>
-			</executions>
-		</plugin>
-    
-     <!-- this plugin enables the .jar to have a concrete entrypoint (the main in shephardmp.screencapturer.App  -->
- 	<plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-jar-plugin</artifactId>
-		<version>3.1.1</version>
-		<configuration>
-			<!-- DO NOT include log4j.properties file in your Jar -->
-			<excludes>
-				<exclude>**/log4j.properties</exclude>
-			</excludes>
-	
-			<archive>
-				<manifest>
-				    <addClasspath>true</addClasspath>
-				<!-- Jar file entry point -->
-					<mainClass>shephardmp.screencapturer.App</mainClass>
-				</manifest>
-			</archive>
-		</configuration>
-	</plugin>
-		
-		
-	<!-- Produces a jar-with-dependencies which has sources and javadoc documentation -->
-	<plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.1.1</version>
-        <configuration>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
-          <archive>
-				<manifest>
-				    <addClasspath>true</addClasspath>
-				<!-- Jar file entry point -->
-					<mainClass>shephardmp.screencapturer.App</mainClass>
-				</manifest>
-			</archive>
-        </configuration>
-        <executions>
-          <execution>
-            <id>make-assembly</id> <!-- this is used for inheritance merges -->
-            <phase>package</phase> <!-- bind to the packaging phase -->
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-		
-	  </plugins>
-  </build>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.java</include>
+					<include>**/*.gwt.xml</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+
+
+			<plugin>
+
+				<!-- compile for compatibility with older java verisons (JDK's) -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration> <!-- Compile java 7 compatible bytecode -->
+					<source>1.7</source>
+					<target>1.7</target>
+
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.1.1</version>
+				<configuration>
+					<!-- DO NOT include log4j.properties file in your Jar -->
+					<excludes>
+						<exclude>**/log4j.properties</exclude>
+					</excludes>
+
+					<finalName>screencapturer</finalName>
+					<archive>
+						<manifest>
+							<!-- Jar file entry point -->
+							<mainClass>shephardmp.screencapturer.App</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+
+			</plugin>
+
+		</plugins>
+
+	</build>
+
 </project>
+		
+
+	
+
