@@ -31,9 +31,9 @@ Also avaible as a library to capture the screen into various formats for further
 And adding the dependency:
 ```
 <dependency>
-	<groupId>com.github.shephardmp</groupId>
-	<artifactId>screencapturer</artifactId>
-	<version>1.0.1</version>
+	    <groupId>com.github.ShephardMP</groupId>
+	    <artifactId>ScreenCapturer</artifactId>
+	    <version>1.0.1</version>
 </dependency>
 ```
 
