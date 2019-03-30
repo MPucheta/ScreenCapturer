@@ -10,7 +10,10 @@ import java.io.File;
 
 import javax.imageio.ImageIO;
 
+import shephardmp.screencapturer.utils.FullScreenCapturer;
+import shephardmp.screencapturer.utils.IScreenCapturer;
 import shephardmp.screencapturer.utils.ImageTransferable;
+import shephardmp.screencapturer.utils.PartialScreenCapturer;
 
 /**
  * 

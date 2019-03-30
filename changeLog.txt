@@ -1,0 +1,20 @@
+# Changelog
+All notable changes to this project will be documented in this file. These changes are grouped into ADDED, FIXED, CHANGED sections.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+ - About versioning: Based on major.minor.[maintenance] versioning (i.e 1.0.1 --> major version 1, minor version 0, maintenance 1)
+  - bugfixes, minor fixes (like typos, unnecessary code or documentation fixes) are considered maintenance versions.
+  - new features are considered minor versions.
+  - a complete overhaul, an addition of an UI, and so on; Is considered a major version.
+
+##[1.0.1]
+
+###CHANGED
+  - Removed a couple of System.out.println() in PartialScreenCapturer so the user has full control of his console. It got replaced with a thread.sleep() to induce some waiting,
+  - Moved all classes to utils, except App and ScreenCapturer (which is the application and library respectively).
+  - Changed background's colors.
+  - Changed legend's colors and font size.
+###Fixed
+ - Fixed POM.xml, there was a bug which the generated .jar didn't include .class

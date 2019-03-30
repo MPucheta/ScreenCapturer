@@ -11,8 +11,9 @@ import javax.swing.JPanel;
 
 /**
  * @author      Mauro Pucheta - "ShephardMP"
- * @version     1.0                
- * @since       1.0          
+ * @version     1.0.1            
+ * @since       1.0      
+ * 
  */
 
 public class Background extends JFrame {
@@ -37,7 +38,8 @@ public class Background extends JFrame {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		this.setSize(screenSize);
 		JLabel legend = new JLabel("Select Screen");
-		legend.setFont(new Font("arial", Font.BOLD, 40));
+		legend.setForeground(new Color(255,26, 152, 255));
+		legend.setFont(new Font("arial", Font.BOLD, 55));
 
 		JPanel background = new JPanel();
 		background.setOpaque(false);
@@ -47,7 +49,7 @@ public class Background extends JFrame {
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setUndecorated(true); // this allows fullscreen
-		this.setBackground(new Color(180, 160, 230, 100)); // color in RGBA.
+		this.setBackground(new Color(26, 255, 244, 50)); // color in RGBA.
 
 		this.pack();
 		this.setVisible(true);
