@@ -16,14 +16,12 @@ import shephardmp.screencapturer.utils.ImageTransferable;
 import shephardmp.screencapturer.utils.PartialScreenCapturer;
 
 /**
- * 
+ * <p> An unified interface to use the library as a static class.</p> 
+ * <p>It allows the user to capture the screen as a Rectangle, as a BufferedImage or directly into de clipboard. </p>
  * @author Mauro Pucheta - "ShephardMP"
  * @version 1.0
  * @since 1.0
  * 
- * <p> An unified interface to use the library as a static class.</p>
- * 
- * <p>It allows the user to capture the screen as a Rectangle, as a BufferedImage or directly into de clipboard. </p>
  * 
  */
 
@@ -48,7 +46,11 @@ public class ScreenCapturer {
 	
 	
 	/**
-	 * Allows to manually capture a part of the screen
+	 * <p>Allows to manually capture a part of the screen. It's expected usage is </p>
+	 * <p>Rectangle r = ScreenCapturer.captureFullScreen();</p>
+	 * <p>You can use it in conjunction with {@link ScreenCapturer#captureImageFromRectangle(Rectangle)}} as follows: </p>
+	 * <p>BufferedImage img= ScreenCapturer.captureImageFromRectangle( ScreenCapturer.captureScreen()); </p>
+	 * <p><strong>Note: it's intended that a capture is a portion of the screen represented as a rectangle for later reuse. It doesn't contain the screen's contents, there are other methods that allows that.</strong></p>
 	 * @return A rectangle which represents the selection. The rectangle has absolute (x,y) coordinates.
 	 */
 	public static Rectangle captureScreen() {
@@ -58,7 +60,11 @@ public class ScreenCapturer {
 	} 
 	
 	/**
-	 * Allows to capture the whole screen
+	 * <p>Allows to capture the whole screen. It's expected usage is </p>
+	 * <p>Rectangle r = ScreenCapturer.captureFullScreen();</p>
+	 * <p>You can use it in conjunction with {@link ScreenCapturer#captureImageFromRectangle(Rectangle)}} as follows: </p>
+	 * <p>BufferedImage img= ScreenCapturer.captureImageFromRectangle( ScreenCapturer.captureFullScreen()); </p>
+	 * <p><strong>Note: it's intended that a capture is the full screen represented as a rectangle for later reuse. It doesn't contain the screen's contents, there are other methods that allows that.</strong></p>
 	 * @return A rectangle which represents the selection. The rectangle starts at (0,0) and has the width and height according to the device's current resolution
 	 */
 	
@@ -86,7 +92,7 @@ public class ScreenCapturer {
 	}
 	
 	/**
-	 * Allows to manually capture an image from the screen
+	 * Allows to manually capture an image from the screen.
 	 * @return an Image to further process or save to disk.
 	 * @see ImageIO#write(java.awt.image.RenderedImage, String, File)
 	 */
@@ -98,7 +104,7 @@ public class ScreenCapturer {
 	}
 	
 	/**
-	 * Allows to get a screenshot
+	 * Allows to get a screenshot.
 	 * @return an Image to further process or save to disk.
 	 * @see ImageIO#write(java.awt.image.RenderedImage, String, File)
 	 */
@@ -110,7 +116,7 @@ public class ScreenCapturer {
 	}
 
 	/**
-	 * Allows to manually capture an image from the screen into the <a href="https://en.wikipedia.org/wiki/Clipboard_(computing)"> CLIPBOARD </a>
+	 * Allows to manually capture an image from the screen into the <a href="https://en.wikipedia.org/wiki/Clipboard_(computing)"> Clipboard </a>
 	 */
 	public static void captureImageFromScreenToClipboard() {
 		
@@ -120,7 +126,7 @@ public class ScreenCapturer {
 	}
 	
 	/**
-	 * Gets a Screenshot to the <a href="https://en.wikipedia.org/wiki/Clipboard_(computing)"> CLIPBOARD </a>
+	 * Gets a Screenshot to the <a href="https://en.wikipedia.org/wiki/Clipboard_(computing)"> Clipboard </a>
 	 */
 	public static void captureImageFromFullScreenToClipboard() {
 		

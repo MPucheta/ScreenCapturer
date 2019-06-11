@@ -6,6 +6,14 @@ import java.io.IOException;
 
 
 /**
+ * <p>It allows an image to become transferable, thus, allowing it to be copied to the clipboard</p>
+ * <p>
+ * Basic usage:
+ * Clipboard clipBoard = Toolkit.getDefaultToolkit().getSystemClipboard(); 
+ * </p>
+ * <p>
+ * clipBoard.setContents(new ImageTransferable(BufferedImage), null);
+ * </p>
  * @see <a href="https://stackoverflow.com/questions/29511334/why-cant-i-cast-a-buffered-image-into-a-transferrable-object-to-send-it-to-the">Stack Overflow Original Code</a>
  * 
  * 
@@ -13,12 +21,7 @@ import java.io.IOException;
  * @version     1.0                
  * @since       1.0   
  * 
- * <p>
- * Basic usage:
- * Clipboard clipBoard = Toolkit.getDefaultToolkit().getSystemClipboard(); </p>
- * <p>
- * clipBoard.setContents(new ImageTransferable(BufferedImage), null);
- * </p>
+
  */
 
 

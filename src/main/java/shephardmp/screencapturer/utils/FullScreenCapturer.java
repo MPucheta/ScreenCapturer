@@ -7,13 +7,13 @@ import java.awt.Toolkit;
 
 /**
  * 
- * 
+ * <p>
+ * Captures the full screen.
+ * </p> 
  * @author Mauro Pucheta - "ShephardMP"
  * @version 1.0
  * @serial 1.0
- * <p>
- * Captures the full screen
- * </p>
+ 
  */
 public class FullScreenCapturer implements IScreenCapturer {
 

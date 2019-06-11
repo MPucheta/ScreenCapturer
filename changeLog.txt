@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - new features are considered minor versions.
   - a complete overhaul, an addition of an UI, and so on; Is considered a major version.
 
+##[1.1]
+
+###ADDED
+  - SelectionBorder and SelectionBorderDrawer. Those classes allows the user to see what he´s selecting.
+
+###CHANGED
+  - There is no longer a legend and a pink background during the selection. It´s too distracting considering the new selection mechanism. 
+
 ##[1.0.1]
 
 ###CHANGED

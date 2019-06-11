@@ -3,19 +3,19 @@ package shephardmp.screencapturer.utils;
 import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
 
 /**
  * 
- * 
+  * <p>
+ * A MouseCapturer has the responsibility of capturing a portion of the screen with the mouse. 
+ * It works by setting the (x,y) coordinates that defines a Rectangle when pressing and releasing a mouse button
+ * </p>
  * @author Mauro Pucheta - "ShephardMP"
  * @version 1.0
  * @since 1.0
  *
- * <p>
- * A MouseCapturer has the responsibility of capturing a portion of the screen with the mouse. 
- * It works by setting the (x,y) coordinates that defines a Rectangle when pressing and releasing a mouse button
- * </p>
  */
 public class MouseCapturer implements MouseListener{
 
@@ -134,6 +134,8 @@ public class MouseCapturer implements MouseListener{
 		selected.setBounds(startingX, startingY,newX-startingX,newY-startingY);
 		endCapture[0]=true;
 	}
+
+
 	
 	
 
