@@ -10,7 +10,7 @@ Also avaible as a library to capture the screen into various formats for further
 
 ```
 <dependency>
-	<groupId>com.github.shephardmp</groupId>
+	<groupId>com.github.mpucheta</groupId>
 	<artifactId>screencapturer</artifactId>
 	<version>1.1</version>
 	<scope>system</scope>
@@ -31,7 +31,7 @@ Also avaible as a library to capture the screen into various formats for further
 And adding the dependency:
 ```
 <dependency>
-	    <groupId>com.github.ShephardMP</groupId>
+	    <groupId>com.github.MPucheta</groupId>
 	    <artifactId>ScreenCapturer</artifactId>
 	    <version>1.1</version>
 </dependency>
